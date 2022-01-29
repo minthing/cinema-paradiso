@@ -5,6 +5,9 @@
 ### ReactNative ###
 # React Native Stack Base
 
+ios/
+andriod/
+
 .expo
 __generated__
 

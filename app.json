@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "cinema-paradiso",
+    "slug": "cinema-paradiso",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "cinema-paradiso"
+}
