@@ -20,3 +20,6 @@ export default function App() {
 }
 
 ```
+
+### react natigation
+docs : https://reactnavigation.org/
