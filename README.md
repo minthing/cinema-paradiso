@@ -23,3 +23,45 @@ export default function App() {
 
 ### react natigation
 docs : https://reactnavigation.org/
+
+```javascript
+const Tab = createBottomTabNavigator();
+```
+
+- `screenOptions`와 `option`을 통해 tab을 꾸밀 수 있다.
+
+```javascript
+    screenOptions={{
+      tabBarStyle: { backgroundColor: "tomato" },
+      tabBarActiveTintColor: "red",
+      tabBarInactiveTintColor: "purple",
+      headerTitleStyle: { color: "tomato" },
+      headerRight: () => (
+        <View>
+          <Text>Hello</Text>
+        </View>
+      ),
+    }}
+```
+
+### useColorScheme
+- 현재 화면이 라이트모드인지 다크모드인지 알려준다.
+- `shift+commend+a`를 통해 시뮬레이터 모드를 바꿀 수 있다.
+- 이슈기록 : tab이 먼저 실행됨 이슈
+```javascript
+const Tab = () => (
+  // 이 경우 정상실행
+)
+
+const Tab = () => {
+  // 이 경우 정상실행
+  return ()
+}
+
+const Tab = () => {
+  // 이 경우 정상 실행 안함
+}
+
+```
+
+- color picker:https://flatuicolors.com/palette/ru
