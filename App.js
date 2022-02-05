@@ -1,12 +1,12 @@
 import AppLoading from 'expo-app-loading';
 import React, {useState} from 'react';
-import { Text, Image } from "react-native";
+import { Text, Image, useColorScheme } from "react-native";
 // for preload fonts
 import * as Font from "expo-font";
 import {MaterialIcons} from '@expo/vector-icons';
 import { Asset } from "expo-asset";
 //Tab
-import { NavigationContainer } from "@react-navigation/native";
+import { NavigationContainer, DarkTheme, DefaultTheme } from "@react-navigation/native";
 import Tabs from "./navigation/Tabs";
 
 // hooks를 사용해서 불러올 수 있음 단, prefetch()를 사용할 수 없음.
@@ -39,11 +39,12 @@ export default function App() {
     await Promise.all([...fonts, ...images]);
     
   };
+  const isDark = useColorScheme() === 'dark';
   if(!ready){
     return <AppLoading startAsync={startLoading} onFinish={onFinish} onError={console.error}/>;
   }
   return (
-    <NavigationContainer>
+    <NavigationContainer theme={isDark ? DarkTheme : DefaultTheme}>
       <Tabs />
     </NavigationContainer>
   );
