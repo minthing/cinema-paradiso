@@ -93,3 +93,6 @@ const ScreenThree = ({ navigation: { setOptions } }) => (
     <Text>Change title</Text>
   </TouchableOpacity>
 ```
+
+### 220207
+theme : https://styled-components.com/docs/api#themeconsumer

@@ -9,6 +9,7 @@ import { Asset } from "expo-asset";
 import { NavigationContainer, DarkTheme, DefaultTheme } from "@react-navigation/native";
 import Tabs from "./navigation/Tabs";
 import Stack from "./navigation/Stack";
+import Root from "./navigation/Root";
 
 // hooks를 사용해서 불러올 수 있음 단, prefetch()를 사용할 수 없음.
 
@@ -46,7 +47,7 @@ export default function App() {
   }
   return (
     <NavigationContainer theme={isDark ? DarkTheme : DefaultTheme}>
-      <Stack />
+      <Root />
     </NavigationContainer>
   );
 }

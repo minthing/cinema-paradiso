@@ -8,6 +8,7 @@ import { useColorScheme } from 'react-native';
 import { color } from "react-native/Libraries/Components/View/ReactNativeStyleAttributes";
 import { darkGrey, darkInitial, darkTint, lightGrey, lightTint } from "../colors";
 import { MaterialIcons, Feather } from '@expo/vector-icons';
+import Stack from "./Stack";
 
 const Tab = createBottomTabNavigator();
 
