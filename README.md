@@ -65,3 +65,31 @@ const Tab = () => {
 ```
 
 - color picker:https://flatuicolors.com/palette/ru
+
+### native stack navigation
+https://reactnavigation.org/docs/native-stack-navigator
+
+stack navigation 보다 좀 더 빠르다.
+`navigate`를 사용하여 다른 페이지로 갈 수 있게 만들어줌.
+
+```javascript
+const ScreenOne = ({ navigation: { navigate } }) => (
+  <TouchableOpacity onPress={() => navigate("Two")}>
+    <Text>go to two</Text>
+  </TouchableOpacity>
+```
+
+* `goBack()` 시용법
+```javascript
+const ScreenThree = ({ navigation: { goBack } }) => (
+  <TouchableOpacity onPress={() => goBack()}>
+    <Text>Three</Text>
+  </TouchableOpacity>
+```
+* `setOptions()` 시용법
+```javascript
+const ScreenThree = ({ navigation: { setOptions } }) => (
+  <TouchableOpacity onPress={() => setOptions({ title: "Hello!" })}>
+    <Text>Change title</Text>
+  </TouchableOpacity>
+```
