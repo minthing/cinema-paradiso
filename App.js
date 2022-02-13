@@ -11,6 +11,9 @@ import Tabs from "./navigation/Tabs";
 import Stack from "./navigation/Stack";
 import Root from "./navigation/Root";
 
+import { ThemeProvider } from "styled-components/native";
+import { darkTheme, lightTheme } from "./styled";
+
 // hooks를 사용해서 불러올 수 있음 단, prefetch()를 사용할 수 없음.
 
   // 폰트를 배열로 불러오는 중
@@ -46,8 +49,10 @@ export default function App() {
     return <AppLoading startAsync={startLoading} onFinish={onFinish} onError={console.error}/>;
   }
   return (
-    <NavigationContainer theme={isDark ? DarkTheme : DefaultTheme}>
-      <Root />
-    </NavigationContainer>
+    <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
+      <NavigationContainer>
+        <Root />
+      </NavigationContainer>
+    </ThemeProvider>
   );
 }
