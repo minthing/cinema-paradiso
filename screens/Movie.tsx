@@ -15,11 +15,6 @@ const Title = styled.Text`
 color: ${(props) => props.theme.textColor};
 `
 
-const Movie: React.FC<NativeStackScreenProps<any, "Movies">> = ({
-  navigation: { navigate },
-}) => (
-  <Button onPress={() => navigate("Stack", { screen: "Three" })}>
-    <Title>Movie!!!</Title>
-  </Button>
-);
+const Movie: React.FC<NativeStackScreenProps<any, "Movies">> = () => null;
+
 export default Movie;
