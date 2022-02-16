@@ -16,6 +16,10 @@ const Tabs = () => {
   const isDark = useColorScheme() === 'dark';
   return(
     <Tab.Navigator
+    // 원래 있는 요소임
+    sceneContainerStyle={{
+      backgroundColor: isDark ? darkInitial : "white",
+    }}
       screenOptions={{
         tabBarStyle: {
           backgroundColor: isDark ? darkInitial : "white",

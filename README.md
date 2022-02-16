@@ -96,3 +96,6 @@ const ScreenThree = ({ navigation: { setOptions } }) => (
 
 ### 220207
 theme : https://styled-components.com/docs/api#themeconsumer
+
+##### swiper
+https://github.com/leecade/react-native-swiper
